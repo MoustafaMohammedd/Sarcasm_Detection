@@ -1,0 +1,13 @@
+python==3.11.9
+torch==2.1.0
+torchtext==0.16
+numpy==1.26.4
+tensorboard
+pandas
+matplotlib
+seaborn
+scikit-learn
+transformers
+tqdm
+opendatasets
+copy
