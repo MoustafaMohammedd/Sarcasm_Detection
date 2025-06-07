@@ -72,8 +72,9 @@ def our_train(epochs,our_model,our_accuracy):
     
         train_accuracy_v+=our_accuracy(y_train_batch,y_train_pred)
     
+      our_model.eval()
       with torch.inference_mode(): 
-        our_model.eval()
+        
         for x_test_batch , y_test_batch in our_test_data_loader : 
             x_test_batch=x_test_batch.to(device).long()
             y_test_batch=y_test_batch.to(device).reshape(-1,1)
@@ -155,8 +156,9 @@ def our_train_bert(epochs,our_model,our_accuracy):
     
         train_accuracy_v+=our_accuracy(y_train_batch,y_train_pred)
     
+      our_model.eval()
       with torch.inference_mode(): 
-        our_model.eval()
+        
         for x_test_batch , y_test_batch in our_test_data_loader_bert : 
             x_test_batch=x_test_batch.to(device)
             y_test_batch=y_test_batch.to(device)
@@ -169,8 +171,8 @@ def our_train_bert(epochs,our_model,our_accuracy):
     
             test_accuracy_v+=our_accuracy(y_test_batch,y_test_pred)
     
-      train_loss_l.append(train_loss_v/our_train_data_set_bert.__len__())
-      test_loss_l.append(test_loss_v/our_test_data_set_bert.__len__())
+      train_loss_l.append(train_loss_v/1000)
+      test_loss_l.append(test_loss_v/100)
     
       train_accuracy_l.append(train_accuracy_v/our_train_data_set_bert.__len__())
       test_accuracy_l.append(test_accuracy_v/our_test_data_set_bert.__len__())

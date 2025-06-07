@@ -7,7 +7,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 from utils import our_predict
-
+from transformers import AutoModel ,AutoTokenizer
 
 our_train_data_loader, our_test_data_loader,our_train_data_set,our_test_data_set=get_datasets_and_loaders_for_lstm()
 our_train_data_loader_bert,our_test_data_loader_bert,our_train_data_set_bert,our_test_data_set_bert=get_datasets_and_loaders_for_bert()
@@ -20,7 +20,11 @@ checkpoint = torch.load(r"D:\Sarcasm_Detection\best_model_lstm\best_model.pth")
 our_lstm_model.load_state_dict(checkpoint['model_state_dict'])
 
 
-our_bert_model=BertModel(config_hp["MAX_VOCAB"],config_hp["EMBEDDING_SIZE"],config_hp["LSTM_HIDDEN_SIZE"],config_hp["LSTM_N_LAYERS"]).to(device)
+bert_model = AutoModel.from_pretrained("google-bert/bert-base-uncased")
+for p in bert_model.parameters():
+    p.requires_grad = False
+
+our_bert_model=BertModel(bert_model).to(device)
 checkpoint_bert = torch.load(r"D:\Sarcasm_Detection\best_model_bert\best_model.pth")
 our_bert_model.load_state_dict(checkpoint_bert['model_state_dict'])
 
