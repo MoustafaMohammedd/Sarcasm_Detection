@@ -74,7 +74,7 @@ This repository contains an implementation of two deep learning models — **BER
 ## 🧪 Key Observations
 
 - **BERT outperformed LSTM**, showing better generalization and higher classification scores.
-- LSTM showed signs of **overfitting**, as seen from the training vs validation loss curves.
+- LSTM and BERT showed signs of **overfitting**, as seen from the training vs validation loss curves.
 - Both models achieved decent results, but transformer-based models like BERT are more effective at capturing context and nuance in language.
 - LSTM shows faster training but lower overall performance
 
