@@ -1,7 +1,6 @@
 # Sarcasm Detection Using NLP 🚀  
 **Detecting sarcasm in text using BERT & LSTM models for Natural Language Processing**
 
-![Sarcasm Detection](https://via.placeholder.com/1500x400?text=Sarcasm+Detection+in+NLP)  
 *A project focused on identifying sarcastic statements in textual data using advanced NLP techniques.*
 
 ---
