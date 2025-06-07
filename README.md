@@ -90,14 +90,16 @@ This repository contains an implementation of two deep learning models — **BER
 ---
 
 ## 📦 Project Structure
-sarcasm-detection/
-├── data/ # Download Dataset files
-├── best_model_bert/ # Model checkpoint for BERT (not uploaded)
-├── best_model_lstm/ # Model checkpoint for LSTM
-├── src/ # Source code
-├── runs/ # For logging by tensorboard
-├── images/ # For models plots and confusion matrix
-├── notebooks/ # Jupyter notebooks
-├── config/ # Configuration
-├── requirements.txt # Dependencies
-└── README.md # This file
+```shall
+📂 sarcasm-detection/
+├── 📁 data/                  # Download Dataset files
+├── 🤖 best_model_bert/       # Model checkpoint for BERT (not uploaded)
+├── 🧠 best_model_lstm/       # Model checkpoint for LSTM
+├── 💻 src/                   # Source code
+├── 📊 runs/                  # For logging by tensorboard
+├── 🖼️ images/                # For models plots and confusion matrix
+├── 📓 notebooks/             # Jupyter notebooks
+├── ⚙️ config/                # Configuration
+├── 📜 requirements.txt       # Dependencies
+└── 📖 README.md              # This file
+```
