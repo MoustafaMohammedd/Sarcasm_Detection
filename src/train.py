@@ -12,7 +12,7 @@ from src.data import get_datasets_and_loaders_for_lstm,get_datasets_and_loaders_
 from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
 from src.utils import our_accuracy,EarlyStopping,save_checkpoint, plot_l_a
-from transformers import AutoModel ,AutoTokenizer
+from transformers import AutoModel 
 
 our_train_data_loader, our_test_data_loader,our_train_data_set,our_test_data_set=get_datasets_and_loaders_for_lstm()
 

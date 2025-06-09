@@ -1,21 +1,18 @@
 import os
 import sys  
-
 project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
-# ...existing code...
 
 import numpy as np
 import pandas as pd
 import torch
 from torch.utils.data import DataLoader ,Dataset
 from sklearn.model_selection import train_test_split
-from torchtext.data import get_tokenizer
 from torchtext.vocab import build_vocab_from_iterator
 from src.utils import pad_sentence ,prepare_data,tokenizer
 from config.config import config_hp
-from transformers import AutoModel ,AutoTokenizer
+from transformers import AutoTokenizer
 
 bert_tokenizer = AutoTokenizer.from_pretrained("google-bert/bert-base-uncased")
 

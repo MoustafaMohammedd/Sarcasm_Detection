@@ -5,9 +5,8 @@ import torch
 from sklearn.metrics import confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
-
 from utils import our_predict
-from transformers import AutoModel ,AutoTokenizer
+from transformers import AutoModel 
 
 our_train_data_loader, our_test_data_loader,our_train_data_set,our_test_data_set=get_datasets_and_loaders_for_lstm()
 our_train_data_loader_bert,our_test_data_loader_bert,our_train_data_set_bert,our_test_data_set_bert=get_datasets_and_loaders_for_bert()
